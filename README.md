@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* Modelagem do banco de dados disponível no link https://dbdiagram.io/d/61af51b48c901501c0e4b1f1
+
 * ...
