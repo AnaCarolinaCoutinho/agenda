@@ -1,18 +1,18 @@
 class Api::V1::UsersController < Api::V1::ApiController
  
-    before_action :set_user, only: [:show, :update, :destroy]
+    before_action :set_user, only: [ :show, :update, :destroy]
     
     # before_action :require_authorization!, only: [:show, :update, :destroy]
     
     # GET /api/v1/users
     
-    # def index
+    def index
     
-    #   @users = current_user.users
+      @users = User.all
     
-    #   render json: @users
+      render json: @users
     
-    # end
+    end
     
     # GET /api/v1/users/1
     
@@ -25,8 +25,9 @@ class Api::V1::UsersController < Api::V1::ApiController
     # POST /api/v1/users
     def create
     
-      #@user = User.new(user_params.merge(user: current_user))
+      # @user = User.new(user_params.merge(user: current_user))
       @user = User.new(user_params)
+
       if @user.save
     
         render json: @user, status: :created
