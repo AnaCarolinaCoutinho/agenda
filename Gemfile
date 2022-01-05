@@ -26,6 +26,7 @@ gem 'rack-cors'
 gem 'rack-attack'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
+gem 'cancancan'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
