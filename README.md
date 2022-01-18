@@ -21,6 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* Modelagem do banco de dados disponível no link https://dbdiagram.io/d/61af51b48c901501c0e4b1f1
+* Modelagem do banco de dados disponível no link https://dbdiagram.io/d/
+
+Para criar um usuário admin e conseguir utilizar e testar o sistema, rode no terminal rails db:seed
+Esse comando criará um usuário administrador que consegue criar outros usuários, administradores ou não, que consegue visualizar todos os usuários, bem como alterar os mesmos. 
 
 * ...
