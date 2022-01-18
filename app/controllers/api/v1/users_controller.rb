@@ -7,7 +7,7 @@ class Api::V1::UsersController < Api::V1::ApiController
     # GET /api/v1/users
     
     def index
-      if current_user.role
+      if current_user.role ==1
         @users = User.all
         render json: @users
         return
@@ -19,7 +19,7 @@ class Api::V1::UsersController < Api::V1::ApiController
     # GET /api/v1/users/1
     
     def show
-      if current_user.role
+      if current_user.role ==1
         render json: @user
         return
       end
@@ -28,7 +28,7 @@ class Api::V1::UsersController < Api::V1::ApiController
     
     # POST /api/v1/users
     def create
-      if current_user.role
+      if current_user.role ==1
         @user = User.new(user_params)
         if @user.save
           render json: @user, status: :created
@@ -43,7 +43,7 @@ class Api::V1::UsersController < Api::V1::ApiController
     # PATCH/PUT /api/v1/user/1
     
     def update
-      if current_user.role
+      if current_user.role ==1
         if @user.update(user_params)
           render json: @user
         else
@@ -56,8 +56,8 @@ class Api::V1::UsersController < Api::V1::ApiController
     
     # DELETE /api/v1/users/1
     
-    def destroy
-      if current_user.role
+    def destroy 
+      if current_user.role ==1
         @user.destroy
         return
       end

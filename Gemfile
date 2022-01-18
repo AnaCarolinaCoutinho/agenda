@@ -21,7 +21,6 @@ gem 'puma', '~> 5.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'sqlite3'
 gem 'rack-cors'
 gem 'rack-attack'
 gem 'devise'

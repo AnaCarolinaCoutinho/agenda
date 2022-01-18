@@ -1,12 +1,44 @@
 {
 	"info": {
-		"_postman_id": "4d6ab1fb-d803-48b7-a997-b15793d039c1",
-		"name": "agenda_teste",
+		"_postman_id": "513c6f67-c827-4e4c-a69e-5ac62cbe3a9c",
+		"name": "Agenda",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "admin_index",
+			"name": "User_admin_index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "carolinacoutinho@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "mfGAPrnhpYCsesx8z2z6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_adimin_show",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -15,18 +47,18 @@
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "aninha@gmail.com",
+						"value": "carolinacoutinho@gmail.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "51zdRp_jemSvVUYGK6a3",
+						"value": "mfGAPrnhpYCsesx8z2z6",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"oliveira@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"carol\",\n        \"role\": false\n        }\n\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,41 +66,40 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/4",
+					"raw": "localhost:3000/api/v1/users/2",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
-						"4"
+						"2"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "admin_create",
+			"name": "User_admin_create",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "aninha@gmail.com",
+						"value": "carolinacoutinho@gmail.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "51zdRp_jemSvVUYGK6a3",
+						"value": "mfGAPrnhpYCsesx8z2z6",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"silver@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"silva\",\n        \"role\": false\n        }\n\n}",
+					"raw": "{\n    \"user\": {\n        \"email\": \"silver@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"silva\",\n        \"role\": \"1\"\n        }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,84 +107,40 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users",
+					"raw": "localhost:3000/api/v1/users/",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
-						"users"
+						"users",
+						""
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "admin_show",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "X-User-Email",
-						"value": "aninha@gmail.com",
-						"type": "text"
-					},
-					{
-						"key": "X-User_Token",
-						"value": "51zdRp_jemSvVUYGK6a3",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"oliveira@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"carol\",\n        \"role\": false\n        }\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/admin/api/v1/users",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"admin",
-						"api",
-						"v1",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "admin_update",
+			"name": "User_admin_update",
 			"request": {
 				"method": "PUT",
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "aninha@gmail.com",
+						"value": "carolinacoutinho@gmail.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "51zdRp_jemSvVUYGK6a3",
+						"value": "mfGAPrnhpYCsesx8z2z6",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
+					"raw": "{\n    \"id\": 1,\n    \"email\": \"atlas@gmail.com\",\n    \"created_at\": \"2022-01-17T00:00:00.000Z\",\n    \"updated_at\": \"2022-01-17T00:00:00.000Z\",\n    \"name\": \"Atlas\",\n    \"authentication_token\": \"\",\n    \"role\": 1.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,41 +148,40 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/10",
+					"raw": "localhost:3000/api/v1/users/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
-						"10"
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "admin_delete",
+			"name": "User_admin_delete",
 			"request": {
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "aninha@gmail.com",
+						"value": "carolinacoutinho@gmail.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "51zdRp_jemSvVUYGK6a3",
+						"value": "mfGAPrnhpYCsesx8z2z6",
 						"type": "text"
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
+					"mode": "urlencoded",
+					"urlencoded": [],
 					"options": {
 						"raw": {
 							"language": "json"
@@ -203,17 +189,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/10",
+					"raw": "localhost:3000/api/v1/users/3",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
-						"10"
+						"3"
 					]
 				}
 			},
@@ -221,44 +206,63 @@
 		},
 		{
 			"name": "User_index",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "abc@gmail.com",
+						"value": "edilson@teste.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "6kxMrmWixKxPUs8vQjAz",
+						"value": "TGkxeksCtUpy4N9dz5ha",
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/",
+					"raw": "localhost:3000/api/v1/users/",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
 					]
 				}
 			},
@@ -271,18 +275,18 @@
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "abc@gmail.com",
+						"value": "edilson@teste.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "6kxMrmWixKxPUs8vQjAz",
+						"value": "TGkxeksCtUpy4N9dz5ha",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
+					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": \"0\"\n        }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -290,62 +294,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/",
+					"raw": "localhost:3000/api/v1/users/",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
 						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "User_show",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "X-User-Email",
-						"value": "abc@gmail.com",
-						"type": "text"
-					},
-					{
-						"key": "X-User_Token",
-						"value": "6kxMrmWixKxPUs8vQjAz",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/1",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"admin",
-						"api",
-						"v1",
-						"users",
-						"1"
 					]
 				}
 			},
@@ -358,18 +316,18 @@
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "abc@gmail.com",
+						"value": "edilson@teste.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "6kxMrmWixKxPUs8vQjAz",
+						"value": "TGkxeksCtUpy4N9dz5ha",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes1@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
+					"raw": "{\n    \"id\": 1,\n    \"email\": \"atlas241564164134@gmail.com\",\n    \"created_at\": \"2022-01-17T00:00:00.000Z\",\n    \"updated_at\": \"2022-01-17T00:00:00.000Z\",\n    \"name\": \"Atlas\",\n    \"authentication_token\": \"\",\n    \"role\": 1.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -377,17 +335,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/9",
+					"raw": "localhost:3000/api/v1/users/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
-						"9"
+						"1"
 					]
 				}
 			},
@@ -400,18 +357,18 @@
 				"header": [
 					{
 						"key": "X-User-Email",
-						"value": "abc@gmail.com",
+						"value": "edilson@teste.com",
 						"type": "text"
 					},
 					{
 						"key": "X-User_Token",
-						"value": "6kxMrmWixKxPUs8vQjAz",
+						"value": "TGkxeksCtUpy4N9dz5ha",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": {\n        \"email\": \"estes1@teste.com\",\n        \"password\": \"123456\",\n        \"name\": \"estes\",\n        \"role\": false\n        }\n\n}",
+					"raw": "{\n    \"id\": 1,\n    \"email\": \"atlas241564164134@gmail.com\",\n    \"created_at\": \"2022-01-17T00:00:00.000Z\",\n    \"updated_at\": \"2022-01-17T00:00:00.000Z\",\n    \"name\": \"Atlas\",\n    \"authentication_token\": \"\",\n    \"role\": 1.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -419,17 +376,201 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/admin/api/v1/users/9",
+					"raw": "localhost:3000/api/v1/users/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"admin",
 						"api",
 						"v1",
 						"users",
-						"9"
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact_show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact_create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contact\": {\n        \"email\": \"saul@teste.com\",\n        \"phone\": \"987452369\",\n        \"name\": \"saulo\",\n        \"desciption\":\"faxineiro\"\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact_update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"laisa\",\n    \"email\": \"costa@teste.com\",\n    \"phone\": \"984563254\",\n    \"description\": \"merendeira\",\n    \"user_id\": 5,\n    \"created_at\": \"2022-01-18T01:08:39.234Z\",\n    \"updated_at\": \"2022-01-18T01:08:39.234Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"email\": \"atlas241564164134@gmail.com\",\n    \"created_at\": \"2022-01-17T00:00:00.000Z\",\n    \"updated_at\": \"2022-01-17T00:00:00.000Z\",\n    \"name\": \"Atlas\",\n    \"authentication_token\": \"\",\n    \"role\": 1.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"2"
 					]
 				}
 			},
