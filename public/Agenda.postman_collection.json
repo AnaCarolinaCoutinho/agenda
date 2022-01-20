@@ -181,12 +181,7 @@
 				],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": [],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"urlencoded": []
 				},
 				"url": {
 					"raw": "localhost:3000/api/v1/users/3",
@@ -392,7 +387,38 @@
 			"response": []
 		},
 		{
-			"name": "User_index",
+			"name": "Contact_index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Email",
+						"value": "edilson@teste.com",
+						"type": "text"
+					},
+					{
+						"key": "X-User_Token",
+						"value": "TGkxeksCtUpy4N9dz5ha",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_admin_contact_index",
 			"request": {
 				"method": "GET",
 				"header": [
