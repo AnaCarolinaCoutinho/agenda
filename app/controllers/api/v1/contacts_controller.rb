@@ -7,11 +7,16 @@ class Api::V1::ContactsController < Api::V1::ApiController
   # GET /api/v1/contacts
   
   def index
-  
-    @contacts = current_user.contacts
-  
-    render json: @contacts
-  
+ 
+    if current_user.role == 1 
+      @contacts = Contact.all
+      render json: @contacts
+      return
+    else 
+      @contacts = current_user.contacts 
+      render json: @contacts
+      return
+    end
   end
   
   # GET /api/v1/contacts/1
@@ -83,13 +88,16 @@ class Api::V1::ContactsController < Api::V1::ApiController
     end
   
     def require_authorization!
-  
-      unless current_user == @contact.user
-  
-        render json: {}, status: :forbidden
-  
+      if current_user.role == 1 
+        return
+      else 
+        unless current_user == @contact.user
+          render json: {}, status: :forbidden
+          return
+        end
       end
   
     end
-  
- end
+end 
+ 
+   
